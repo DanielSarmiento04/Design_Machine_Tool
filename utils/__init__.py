@@ -25,3 +25,15 @@ def calculate_c_r(r, p0, p1, p2, p3, *args):
 def calculate_k_b_prima(j, a_t, a_b, l_t, l_s, E=30e6):
 
     return pow(1 + j, -1) * (a_t * a_b) / (a_t * l_s + a_b * l_t) * E
+
+
+def calculate_k_f(d, units='usa')-> float:
+    '''
+        Description
+        -----------
+        This function is used to calculate the k_f factor, single bolt fatigue stress concentrator
+    '''
+    if units == 'usa':
+        return 5.7 + 0.6812 * d
+    
+    return 5.7 + 0.02682 * d
