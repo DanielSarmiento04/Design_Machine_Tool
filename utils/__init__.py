@@ -1,3 +1,7 @@
+'''
+    Tornillos y pernos
+'''
+
 def C_dureza(c_h, c_l, c_t, a, t):
     return c_h + (t + a * c_t) * (c_l - c_h)
 
@@ -40,6 +44,11 @@ def calculate_k_f(d, units='usa')-> float:
 
 import numpy as np
 
+
+'''
+    Resortes
+'''
+
 def calculate_indice_resorte(D:float, d:float):
     '''
         Description
@@ -74,3 +83,10 @@ def calculate_SUT(A, d, m):
     '''
     return A / pow(d, m)
 
+def calculate_deflection(F, D, na, d, G):
+    '''
+        Description
+        -----------
+        This function is used to calculate the deflection
+    '''
+    return (8 * F * pow(D, 3) * na) / (pow(d, 4) * G)
