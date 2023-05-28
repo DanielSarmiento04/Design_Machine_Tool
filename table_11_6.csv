@@ -1,0 +1,11 @@
+Num SAE,intervalo diametro [in],SP,SY,SU,Material
+1,0.25–1.5,33,36,60,bajo o medio carbono
+2,0.25–0.75,55,57,74,bajo o medio carbono
+2,0.875–1.5,33,36,60,bajo o medio carbono
+4,0.25–1.5,65,100,115,"medio carbono, forjado en frío"
+5,0.25–1.0,85,92,120,"medio carbono, Q&T*"
+5,1.125–1.5,74,81,105,"medio carbono, Q&T"
+5.2,0.25–1.0,85,92,120,"martensita al bajo carbono, Q&T"
+7,0.25–1.5,105,115,133,"aleación al medio carbono, Q&T"
+8,0.25–1.5,120,130,150,"aleación al medio carbono, Q&T"
+8.2,0.25–1.0,120,130,150,"martensita al bajo carbono, Q&T"

@@ -1,0 +1,8 @@
+num Clase,intervalo diametro [mm],SP,SY,SU,material
+4.6,M5–M36,225,240,400,bajo o medio carbono
+4.8,M1.6–M16,310,340,420,bajo o medio carbono
+5.8,M5–M24,380,420,520,bajo o medio carbono
+8.8,M3–M36,600,660,830,"medio carbono, Q&T"
+9.8,M1.6–M16,650,720,900,"medio carbono, Q&T"
+10.9,M5–M36,830,940,1040,"martensita al bajo carbono, Q&T"
+12.9,M1.6–M36,970,1100,1220,"aleación, templada y revenida"
