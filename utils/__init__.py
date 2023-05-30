@@ -1,6 +1,7 @@
 '''
     Tornillos y pernos
 '''
+import pandas as pd
 
 def C_dureza(c_h, c_l, c_t, a, t):
     return c_h + (t + a * c_t) * (c_l - c_h)
@@ -44,3 +45,25 @@ def calculate_k_f(d, units='usa')-> float:
 
 def calculate_torque_subida(P, dp, µ, L):
     pass
+
+def get_row_values(df:pd.DataFrame, j:float):
+    '''
+        Description
+        -----------
+        This function is used to get the values of a row in a data frame
+        
+        @param df is the table
+        @param j is the value of the row
+    '''
+    
+    row = df.loc[df['j'] == j]
+    if len(row) > 0:
+        return row.iloc[0][1:].to_numpy()
+    
+    upper_values = df.loc[df['j'] > j].iloc[0] [1:].to_numpy()
+    lower_values = df.loc[df['j'] < j].iloc[-1] [1:].to_numpy()
+
+    upper_j = df.loc[df['j'] > j].iloc[0] [:1].to_numpy()
+    lower_j = df.loc[df['j'] < j].iloc[-1] [:1].to_numpy()
+
+    return (j - lower_j) / (upper_j - lower_j) * (upper_values - lower_values) + lower_values
